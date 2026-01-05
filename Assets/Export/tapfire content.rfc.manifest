@@ -1,0 +1,43 @@
+ManifestFileVersion: 0
+CRC: 1237215217
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: 4bf877f103f86c1f9b1a50f2be8ba1c7
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: 2e3f9fabe2262316cef64dc6008317a7
+HashAppended: 0
+ClassTypes:
+- Class: 1
+  Script: {instanceID: 0}
+- Class: 4
+  Script: {instanceID: 0}
+- Class: 28
+  Script: {instanceID: 0}
+- Class: 49
+  Script: {instanceID: 0}
+- Class: 114
+  Script: {fileID: 11500000, guid: ec3b8824308adc64fb1901cef109132a, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: 7f8ca71ca01d2fb4098cb42abc5eceb7, type: 3}
+- Class: 115
+  Script: {instanceID: 0}
+SerializeReferenceClassIdentifiers:
+- AssemblyName: Assembly-CSharp
+  ClassName: MutatorEntry
+- AssemblyName: Assembly-CSharp
+  ClassName: Ravenfield.Mutator.Configuration.BoolConfigurationField
+- AssemblyName: Assembly-CSharp
+  ClassName: Ravenfield.Mutator.Configuration.FloatConfigurationField
+- AssemblyName: Assembly-CSharp
+  ClassName: Ravenfield.Mutator.Configuration.IntegerConfigurationField
+- AssemblyName: Assembly-CSharp
+  ClassName: Ravenfield.Mutator.Configuration.MutatorConfiguration
+- AssemblyName: Assembly-CSharp
+  ClassName: Ravenfield.Mutator.Configuration.MutatorConfigurationLabel
+- AssemblyName: Assembly-CSharp
+  ClassName: Ravenfield.Mutator.Configuration.StringConfigurationField
+Assets:
+- Assets/Tap Fire/Scripts/TapFire Content.prefab
+Dependencies: []

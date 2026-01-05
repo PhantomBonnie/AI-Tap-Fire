@@ -1,0 +1,131 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &5070546404533177198
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6228679037699435884}
+  - component: {fileID: 8942855848864851102}
+  m_Layer: 0
+  m_Name: TapFire Content
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &6228679037699435884
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5070546404533177198}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &8942855848864851102
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5070546404533177198}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ec3b8824308adc64fb1901cef109132a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mutators:
+  - name: Bots Conserve Ammo
+    description: v1.7 | Controlled Pewpew Gaming.
+    menuImage: {fileID: 2800000, guid: 3428d1d8d9862a1408730e1ea0b50a37, type: 3}
+    mutatorPrefab: {fileID: 5070546404533177198, guid: 900d17cef30bb314baf36c8056b1f960, type: 3}
+    configuration:
+      labels:
+      - id: line1
+        displayName: <b>This mod will introduce the concept of ammo conservation
+          to bots.</b>
+        orderPriority: 1
+      - id: line2
+        displayName: Because this script uses the heat mechanic, it is recommended
+          for you to exclude any weapons that have an overheat limit.
+        orderPriority: 2
+      - id: line3
+        displayName: <b>How this mod works.</b>
+        orderPriority: 7
+      - id: line4
+        displayName: 'When a bot engages a target beyond the CQB Distance, its weapon
+          gains heat. '
+        orderPriority: 8
+      - id: line5
+        displayName: When its heat value reaches 1, the weapon cannot fire until
+          heat reaches 0.
+        orderPriority: 9
+      - id: line6
+        displayName: When engaging a target within the CQB Distance, no heat is added.
+        orderPriority: 10
+      - id: line7
+        displayName: Heat Gain Factor determines how much heat a weapon gains for
+          each meter the target is beyond the CQB Distance.
+        orderPriority: 11
+      - id: line8
+        displayName: This value is added with the Minimum Heat Gain to calculate
+          heat gain per shot.
+        orderPriority: 12
+      - id: line9
+        displayName: A bit of RNG is added to make firing patterns less predictable.
+        orderPriority: 13
+      - id: line10
+        displayName: Heat loss per second is calculated with the Heat Gain Factor,
+          heat gain per second, target distance, and RNG.
+        orderPriority: 14
+      - id: line11
+        displayName: Overall, higher Heat Gain Factor results in shorter bursts of
+          fire as distance increases.
+        orderPriority: 15
+      - id: line12
+        displayName: Finally, any weapons added to the Burst Fire list will simply
+          fire in bursts instead.
+        orderPriority: 16
+      - id: line13
+        displayName: These weapons will fire in random bursts when engaging beyond
+          the CQB Distance and if not blacklisted.
+        orderPriority: 17
+      integers:
+      - id: cqbDistance
+        displayName: CQB Distance (Default 30 meters)
+        orderPriority: 4
+        value: 30
+      floats:
+      - id: minGain
+        displayName: Minimum Heat Gain (Default 0.1)
+        orderPriority: 5
+        value: 0.1
+      - id: gain
+        displayName: Heat Gain Factor (Default 0.01)
+        orderPriority: 6
+        value: 0.01
+      ranges: []
+      strings:
+      - id: exclusion
+        displayName: Exclude Weapons (separate with ;)
+        orderPriority: 3
+        value: HMG;Example;Do not separate items with spaces;Do not end with a semicolon
+      - id: burst
+        displayName: Burst Fire Weapons (separate with ;)
+        orderPriority: 4
+        value: AME 556;ADDER;You know, LMGs and stuff
+      bools:
+      - id: debug
+        displayName: Debug Logs
+        orderPriority: 18
+        value: 0
+      dropdowns: []
