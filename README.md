@@ -7,7 +7,7 @@ The mod accomplishes this by manipulating the heat mechanic for weapons, forcing
 This mod only affects small arms. Vehicle weapons (even those that are automatic) are not affected and will continue to rapid fire at their targets. Only bot weapons are affected.
 Because this mutator utilizes Ravenfield's weapon overheating mechanic, it is recommended that you exclude any weapons that have a built in overheat system to avoid potential issues.
 
-You can configure the following values:
+You can configure the following values:  
 CQB Distance (Default 30 meters)
 - When a bot engages a target within this distance, their weapon will not gain heat and they will fire full auto as usual.
 
@@ -21,7 +21,7 @@ Burst Fire List
 - Any weapon names added to this list will not follow the ammo conservation logic described below. Instead, they will follow a different logic where they fire in controlled bursts of varying length.
 - This logic is perfect for weapons that you want to fire in a more aggressive but controlled manner, such as LMGs and certain SMGs. Don't forget your delimiters.
 
-How this mod works:
+How this mod works:  
 - When a bot engages a target beyond the CQB Distance, its weapon gains heat.
 - When its heat value reaches 1, the weapon cannot fire until heat reaches 0.
 - When engaging a target within the CQB Distance, no heat is added.
